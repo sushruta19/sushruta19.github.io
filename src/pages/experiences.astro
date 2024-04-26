@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.astro";
+import exps from "../content/exps.js";
+---
+<Layout
+  title="Experiences | Soubhik Sen"
+  description="Soubhik Sen Work Experience"
+>
+  <section class="mt-8 sm:mt-16">
+    <h1
+      class="text-zinc-900 dark:text-zinc-100 text-3xl md:text-5xl font-bold tracking-tight"
+    >
+      Keep Learning
+    </h1>
+    <h2 class="mt-6 text-zinc-700 dark:text-zinc-300 text-base">
+      In my years in college, I've had the privilege of working with some
+      amazing people and organizations, both startups and open source.<br />
+      Here are some highlights.
+    </h2>
+  </section>
+
+  <ol class="my-8 relative border-l border-gray-100 dark:border-gray-700">
+    {exps.map((exp) => <Experience experience={exp} />)}
+  </ol>
+</Layout>
