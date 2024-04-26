@@ -1,0 +1,188 @@
+---
+import contacts from "../content/contacts.js";
+import profileImg from "../images/profile-img.png";
+---
+
+<section class="mt-8 sm:16 flex flex-col-reverse justify-between md:flex-row">
+  <div class="mt-4 pb-4">
+    <h1
+      class="text-zinc-900 dark:text-zinc-100 text-3xl md:text-5xl font-bold tracking-tight"
+    >
+      Namaste World,<br /> I am Soubhik Sen.
+    </h1>
+    <h2 class="mt-6 text-zinc-700 dark:text-zinc-300 text-base">
+      A MERN stack developer, dabbling with DSA problems in C++, passionate
+      about Theoretical Computer Science and Discrete Mathematics.
+    </h2>
+    <h2 class="text-zinc-700 dark:text-zinc-300 text-base">
+      Graduate with a BTech in CSE from Jalpaiguri Government Engineering
+      College, West Bengal, India.
+    </h2>
+    <div class="mt-10 flex flex-wrap space-x-2">
+      <a
+        href={contacts.github.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex space-x-2 bg-gray-100 rounded-full px-4 py-2 mt-2 lg:mt-0 transition hover:text-teal-500 dark:hover:text-teal-500 hover-icon"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="transition"
+          ><path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+          ></path></svg
+        ><span>{contacts.github.name}</span></a
+      >
+      <a
+        href={contacts.linkedin.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex space-x-2 bg-gray-100 rounded-full px-4 py-2 mt-2 lg:mt-0 transition hover:text-teal-500 dark:hover:text-teal-500 hover-icon"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="transition"
+          ><path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+          ></path></svg
+        ><span>{contacts.linkedin.name}</span></a
+      >
+      <a
+        href={contacts.stack.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex space-x-2 bg-gray-100 rounded-full px-4 py-2 mt-2 lg:mt-0 transition hover:text-teal-500 dark:hover:text-teal-500 hover-icon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          class="transition"
+          viewBox="0 0 169.61 200"
+        >
+          <path d="M140.44 178.38v-48.65h21.61V200H0v-70.27h21.61v48.65z"
+          ></path><path
+            d="M124.24 140.54l4.32-16.22-86.97-17.83-3.78 17.83zM49.7 
+82.16L130.72 120l7.56-16.22-81.02-37.83zm22.68-40l68.06 57.3 
+11.35-13.51-68.6-57.3-11.35 13.51zM116.14 0l-14.59 10.81 53.48 71.89 
+14.58-10.81zM37.81 162.16h86.43v-16.21H37.81z"
+          ></path>
+        </svg>
+        <span>{contacts.stack.name}</span></a
+      >
+
+      <a
+        href={contacts.leetcode.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex space-x-2 bg-gray-100 rounded-full px-4 py-2 mt-2 lg:mt-0 transition hover:text-teal-500 dark:hover:text-teal-500 hover-icon"
+        ><svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition"
+          ><path
+            d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"
+          ></path>
+        </svg><span>{contacts.leetcode.name}</span></a
+      >
+
+      <a
+        href={contacts.hackerrank.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex space-x-2 bg-gray-100 rounded-full px-4 py-2 mt-2 lg:mt-0 transition hover:text-teal-500 dark:hover:text-teal-500 hover-icon"
+        ><svg
+          width="24px"
+          height="24px"
+          viewBox="-1 -1 582 486.999"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition"
+          ><path d="M-1-1h582v402H-1z" fill="none"/><path d="M454.843 
+          141.001c-13.019-22.417-172.832-115-198.859-115-26.019 0-185.895 92.351-198.84 
+          115-12.947 22.649-13.019 207.358 0 230.009 13.018 22.639 172.839 114.989 198.84 
+          114.989 26 0 185.841-92.466 198.851-114.999 13.007-22.533 
+          13.016-207.583.008-229.999zM309.862 398.15c-3.559 
+          0-36.756-32.137-34.141-34.762.781-.78 5.625-1.328 15.768-1.644 
+          0-23.564.53-61.622.844-77.553.038-1.814-.395-3.081-.395-5.256h-71.812c0 
+          6.379-.412 32.523 1.232 65.479.205 4.078-1.42 5.353-5.158 
+          5.335-9.102-.025-18.211-.099-27.321-.071-3.683.009-5.274-1.374-5.157-5.488.826-30.043 
+          2.66-75.488-.134-191.07v-2.849c-8.688-.314-14.717-.862-15.508-1.652-2.624-2.624 
+          31.032-34.76 34.581-34.76 3.558 0 36.989 32.145 34.383 34.76-.782.781-7.098 
+          1.338-15.067 1.652v2.84c-2.174 23.135-1.823 71.506-2.362 
+          94.686h72.107c0-4.089.351-31.212-1.077-75.145-.091-3.047.853-4.646 3.781-4.672 
+          9.945-.072 19.9-.117 29.855-.055 3.108.019 4.105 1.546 4.043 4.834-3.28 
+          171.861-.594 159.867-.594 188.975 7.97.315 15.112.864 15.895 1.655 2.588 
+          2.615-30.205 34.761-33.763 34.761z"/>
+        </svg><span>{contacts.hackerrank.name}</span></a
+      >
+
+      <a
+        href={contacts.gfg.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex space-x-2 bg-gray-100 rounded-full px-4 py-2 mt-2 lg:mt-0 transition hover:text-teal-500 dark:hover:text-teal-500 hover-icon"
+        ><svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition"
+          ><path d="M21.45 
+          14.315c-.143.28-.334.532-.565.745a3.691 3.691 0 0 1-1.104.695 4.51 4.51 0 0 
+          1-3.116-.016 3.79 3.79 0 0 1-2.135-2.078 3.571 3.571 0 0 1-.13-.353h7.418a4.26 
+          4.26 0 0 1-.368 1.008zm-11.99-.654a3.793 3.793 0 0 1-2.134 2.078 4.51 4.51 0 0 
+          1-3.117.016 3.7 3.7 0 0 1-1.104-.695 2.652 2.652 0 0 1-.564-.745 4.221 4.221 0 
+          0 1-.368-1.006H9.59c-.038.12-.08.238-.13.352zm14.501-1.758a3.849 3.849 0 0 
+          0-.082-.475l-9.634-.008a3.932 3.932 0 0 1 1.143-2.348c.363-.35.79-.625 
+          1.26-.809a3.97 3.97 0 0 1 4.484.957l1.521-1.49a5.7 5.7 0 0 0-1.922-1.357 6.283 
+          6.283 0 0 0-2.544-.49 6.35 6.35 0 0 0-2.405.457 6.007 6.007 0 0 0-1.963 1.276 
+          6.142 6.142 0 0 0-1.325 1.94 5.862 5.862 0 0 0-.466 1.864h-.063a5.857 5.857 0 0 
+          0-.467-1.865 6.13 6.13 0 0 0-1.325-1.939A6 6 0 0 0 8.21 6.34a6.698 6.698 0 0 
+          0-4.949.031A5.708 5.708 0 0 0 1.34 7.73l1.52 1.49a4.166 4.166 0 0 1 
+          4.484-.958c.47.184.898.46 1.26.81.368.36.66.792.859 1.268.146.344.242.708.285 
+          1.08l-9.635.008A4.714 4.714 0 0 0 0 12.457a6.493 6.493 0 0 0 .345 2.127 4.927 
+          4.927 0 0 0 1.08 1.783c.528.56 1.17 1 1.88 1.293a6.454 6.454 0 0 0 
+          2.504.457c.824.005 1.64-.15 2.404-.457a5.986 5.986 0 0 0 1.964-1.277 6.116 
+          6.116 0 0 0 1.686-3.076h.273a6.13 6.13 0 0 0 1.686 3.077 5.99 5.99 0 0 0 1.964 
+          1.276 6.345 6.345 0 0 0 2.405.457 6.45 6.45 0 0 0 2.502-.457 5.42 5.42 0 0 0 
+          1.882-1.293 4.928 4.928 0 0 0 1.08-1.783A6.52 6.52 0 0 0 24 12.457a4.757 4.757 
+          0 0 0-.039-.554z"/>
+        </svg><span>{contacts.gfg.name}</span></a
+      >
+
+      
+    </div>
+  </div>
+  <div
+    class="bg-zinc-50 border-2 custom-border-gradient w-full md:max-w-[300px] p-6 flex flex-col items-center justify-center dark:bg-gray-800 dark:text-zinc-50"
+  >
+    <img
+      src={profileImg.src}
+      alt="Soubhik Sen"
+      class="rounded-full w-32 h-32 md:w-48 md:h-48 shadow-md"
+    />
+    <p class="mt-2 font-mono">
+      Programmer | Technical Content Writer @ GeeksforGeeks 2022 | Theoretical
+      Computer Science enthusiast
+    </p>
+  </div>
+</section>
+
+<style>
+  .custom-border-gradient {
+    border-image: linear-gradient(to right, #38b2ac, #a06cd5);
+    border-image-slice: 1;
+  }
+  .hover-icon:hover > svg {
+    fill: #38b2ac;
+  }
+</style>
