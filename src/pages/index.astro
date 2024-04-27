@@ -77,15 +77,19 @@ import articles from "../content/articles.js";
     }
   </section>
 
-
   <section class="mt-4 mb-8 dark:text-zinc-300">
     <h2 class="text-2xl my-2">Contact me</h2>
     <form
-      action="https://api.web3forms.com/submit" method="POST"
+      action="https://api.web3forms.com/submit"
+      method="POST"
       class="space-y-6 mx-auto border border-blue-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-blue-50 dark:bg-blue-opaque"
       id="contact-form"
     >
-    <input type="hidden" name="access_key" value="6e082f45-d130-43d0-b779-117a327edcc9">
+      <input
+        type="hidden"
+        name="access_key"
+        value="6e082f45-d130-43d0-b779-117a327edcc9"
+      />
       <div class="space-y-2">
         <label for="from_name" class="text-lg">Full name</label>
         <input
@@ -115,10 +119,11 @@ import articles from "../content/articles.js";
           rows="3"
           placeholder="Your message"
           class="w-full p-2 rounded dark:bg-gray-800 border border-gray-200"
-          name="message" required></textarea>
+          name="message"
+          required></textarea>
       </div>
       <!-- hCaptcha Spam Protection -->
-      <div class="h-captcha" data-captcha="true"></div>
+      <div class="h-captcha" data-captcha="true" data-size="compact"></div>
       <button
         type="submit"
         id="contactFormBtn"
@@ -126,14 +131,48 @@ import articles from "../content/articles.js";
         >Send Message</button
       >
     </form>
-    <script src="https://web3forms.com/client/script.js" async defer is:inline></script>
+    <script src="https://web3forms.com/client/script.js" async defer is:inline
+    ></script>
   </section>
 </Layout>
 
 <style>
-	:is(.dark .dark\:bg-blue-opaque) {
-        background-color: rgba(13, 42, 148, 0.18);
-    }
+  :is(.dark .dark\:bg-blue-opaque) {
+    background-color: rgba(13, 42, 148, 0.18);
+  }
 </style>
 
+<script>
+  
+  const theme = localStorage.getItem("theme");
+  document.querySelector('.h-captcha').setAttribute('data-theme', theme);
+  // Listen for theme change event from navbar component
+  // window.addEventListener("themeChange", (event) => {
+  //   // Get the theme from the event detail
+  //   const siteTheme = event.detail.theme;
+  //   // Update hCaptcha theme
+  //   hcaptcha.render('captcha-1', {
+  //     theme : siteTheme
+  //   })
+  // });
 
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    const hCaptcha = form.querySelector(
+      "textarea[name=h-captcha-response]"
+    ).value;
+    const name = form.querySelector("from_name").value;
+
+    if (!hCaptcha) {
+      e.preventDefault();
+      alert("Please fill out captcha field");
+      return;
+    }
+    if (name.length < 2 || name.length > 50) {
+      e.preventDefault();
+      alert("Name must be between 2 and 50 characters");
+      return;
+    }
+  });
+</script>
