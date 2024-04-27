@@ -91,9 +91,9 @@ import articles from "../content/articles.js";
         value="6e082f45-d130-43d0-b779-117a327edcc9"
       />
       <div class="space-y-2">
-        <label for="from_name" class="text-lg">Full name</label>
+        <label for="sender_name" class="text-lg">Full name</label>
         <input
-          id="from_name"
+          id="sender_name"
           type="text"
           placeholder="Your name"
           class="w-full p-2 rounded dark:bg-gray-800 border border-gray-200"
@@ -102,9 +102,9 @@ import articles from "../content/articles.js";
         />
       </div>
       <div class="space-y-2">
-        <label for="reply_to" class="text-lg">Email</label>
+        <label for="sender_email" class="text-lg">Email</label>
         <input
-          id="reply_to"
+          id="sender_email"
           type="email"
           placeholder="Your email"
           class="w-full p-2 rounded dark:bg-gray-800 border border-gray-200"
@@ -156,22 +156,23 @@ import articles from "../content/articles.js";
   //   })
   // });
 
-  const form = document.getElementById("contact-form");
+  const form = document.getElementById("contact-form") as HTMLFormElement;
 
   form.addEventListener("submit", function (e) {
-    const hCaptcha = form.querySelector(
-      "textarea[name=h-captcha-response]"
-    ).value;
-    const name = form.querySelector("from_name").value;
+    const hCaptchaElement = form.querySelector("textarea[name='h-captcha-response']") as HTMLTextAreaElement;
+    const hCaptcha = hCaptchaElement.value;
 
-    if (!hCaptcha) {
-      e.preventDefault();
-      alert("Please fill out captcha field");
-      return;
-    }
+    const nameElement = form.querySelector("#sender_name") as HTMLInputElement;
+    const name = nameElement.value;
+    
     if (name.length < 2 || name.length > 50) {
       e.preventDefault();
       alert("Name must be between 2 and 50 characters");
+      return;
+    }
+    if (!hCaptcha) {
+      e.preventDefault();
+      alert("Please fill out captcha field");
       return;
     }
   });
