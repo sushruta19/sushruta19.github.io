@@ -1,0 +1,18 @@
+html {
+  scrollbar-color: #B2A4FF transparent;
+  scrollbar-width: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg,#B2A4FF,#FFB4B4);
+  outline: 0px solid #FFB4B4;
+  border-radius: 10px;
+}
