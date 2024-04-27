@@ -5,7 +5,7 @@ const projects = [
     description: "Full stack MERN project that allows users to display, add, edit, and delete books",
     github_link: "https://github.com/sushruta19/book-store",
     live_link: "",
-    imgUrl: ""
+    imgUrl: "/assets/book-store-card-view.png"
   },
   {
     id : 2,
@@ -21,7 +21,7 @@ const projects = [
     description: "A simple blog website created using EJS templates and Express with MongoDB database integration",
     github_link: "https://github.com/sushruta19/beginner-blog-application",
     live_link: "",
-    imgUrl: ""
+    imgUrl: "/assets/ejs-blog-page.png"
   },
   {
     id : 4,
