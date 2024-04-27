@@ -17,7 +17,7 @@ const contacts = {
   },
   resume : {
     name : "Resume",
-    url : "",
+    url : "https://drive.google.com/file/d/1laxjiRxo6miodeGDkfcp3Z7E-jdT5Ucs/view?usp=sharing",
   },
   gmail : {
     name : "Gmail",

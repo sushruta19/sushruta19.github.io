@@ -1,6 +1,7 @@
 ---
 export interface Props {
     experience: {
+        id : number;
         title: string;
         company: string;
         description: string;
@@ -22,12 +23,11 @@ const { experience } = Astro.props;
         >{experience.span}</time
     >
     <h4
-        class="mb-1 mt-1 text-sm leading-none text-teal-500 dark:text-teal-300"
-        set:html={experience.company}
+        class="mb-1 mt-1 text-sm leading-none text-teal-500 dark:text-teal-300">{experience.company}</h4>
+        
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white"
+        set:html={experience.title}
     />
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-        {experience.title}
-    </h3>
     <p
         class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
         set:html={experience.description}
