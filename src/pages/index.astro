@@ -112,6 +112,7 @@ import articles from "../content/articles.js";
           required
         />
       </div>
+      <input type="hidden" name="subject" value="Message from Main Portfolio">
       <div class="space-y-2">
         <label for="message" class="text-lg">Message</label>
         <textarea
@@ -143,22 +144,22 @@ import articles from "../content/articles.js";
 </style>
 
 <script>
-  
+import Swal from "sweetalert2";
+  type IconType = 'success' | 'error' | 'warning' | 'info' | 'question' | null;
+  function swalMsg(msg : string, icon : IconType) {
+    Swal.fire({
+        title : msg,
+        icon : icon
+      });
+  }
+
   const theme = localStorage.getItem("theme");
   document.querySelector('.h-captcha').setAttribute('data-theme', theme);
-  // Listen for theme change event from navbar component
-  // window.addEventListener("themeChange", (event) => {
-  //   // Get the theme from the event detail
-  //   const siteTheme = event.detail.theme;
-  //   // Update hCaptcha theme
-  //   hcaptcha.render('captcha-1', {
-  //     theme : siteTheme
-  //   })
-  // });
-
+  
   const form = document.getElementById("contact-form") as HTMLFormElement;
 
   form.addEventListener("submit", function (e) {
+    e.preventDefault();
     const hCaptchaElement = form.querySelector("textarea[name='h-captcha-response']") as HTMLTextAreaElement;
     const hCaptcha = hCaptchaElement.value;
 
@@ -166,14 +167,70 @@ import articles from "../content/articles.js";
     const name = nameElement.value;
     
     if (name.length < 2 || name.length > 50) {
-      e.preventDefault();
-      alert("Name must be between 2 and 50 characters");
+      swalMsg("Name must be between 2 and 50 characters", "warning");
       return;
     }
     if (!hCaptcha) {
-      e.preventDefault();
-      alert("Please fill out captcha field");
+      swalMsg("Please fill out captcha field", "warning");
       return;
     }
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    Swal.fire({
+      title : "Sending message...",
+      timerProgressBar : true,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                swalMsg("Message sent successfully!", "success");
+            } else {
+                console.log(response);
+                Swal.fire({
+                  icon : "error",
+                  title : "Oops...",
+                  text : json.message,
+                  showDenyButton: true,
+                  denyButtonText: "No Thanks",
+                  confirmButtonText : "Try Again",
+                }).then(result => {
+                  if(result.isConfirmed) {
+                    window.location.reload();
+                  }
+                });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            Swal.fire({
+              icon : "error",
+              title : "Oops...",
+              text : "Something went wrong!",
+              showDenyButton: true,
+              denyButtonText: "No Thanks",
+              confirmButtonText : "Try Again",
+            }).then(result => {
+              if(result.isConfirmed) {
+                window.location.reload();
+              }
+            });
+        })
+        .then(function() {
+            form.reset();            
+        });
   });
 </script>
