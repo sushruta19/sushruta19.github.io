@@ -3,7 +3,7 @@ const lifeUpdates = [
       year: 2024,
       updates: [
         {
-          title: "Achieved an All India Rank (AIR) of 6000 in GATE CS 2024, Open Category."
+          title: "Achieved an All India Rank (AIR) of 3000 in GATE CS 2024, Open Category."
         }
       ]
     },
