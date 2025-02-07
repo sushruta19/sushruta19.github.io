@@ -1,4 +1,4 @@
-# Soubhik Sen Portfolio
+# Soubhik Sen  Portfolio
 
 ## 🧞 Commands
 
