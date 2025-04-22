@@ -3,6 +3,14 @@ const lifeUpdates = [
       year: 2024,
       updates: [
         {
+          title: "Currently pursuing MTech in Operations Research at NIT Durgapur."
+        }
+      ]
+    },
+    {
+      year: 2024,
+      updates: [
+        {
           title: "Achieved an All India Rank (AIR) of 3000 in GATE CS 2024, Open Category."
         }
       ]
