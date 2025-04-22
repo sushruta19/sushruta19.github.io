@@ -5,7 +5,7 @@ const contacts = {
   },
   linkedin : {
     name : "LinkedIn",
-    url : "https://www.linkedin.com/in/soubhik-sen-62a834241/",
+    url : "https://www.linkedin.com/in/soubhik-sen-2a5991361/",
   },
   stack : {
     name : "Stack Overflow",
@@ -17,7 +17,7 @@ const contacts = {
   },
   resume : {
     name : "Resume",
-    url : "https://drive.google.com/file/d/1EzmuyiVU-ahQI3gXgNFk4qGU33CCimMP/view?usp=sharing",
+    url : "https://drive.google.com/file/d/1q_J9RYCl8rxRFaaazz2PU2NqTWl3rYNi/view?usp=sharing",
   },
   gmail : {
     name : "Gmail",
