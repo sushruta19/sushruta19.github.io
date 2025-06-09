@@ -15,12 +15,13 @@ const exps = [
   },
   {
     id : 2,
-    title : '<a href="https://drive.google.com/file/d/1OUaICSpjFh07ebxaVeLoPkHm85IAMehc/view">Programmer Analyst Intern</a>',
-    company : "Cognizant",
-    description : "Underwent comprehensive training in software development methodologies, programming languages and relevant technologies. Assisted senior developers in software design, coding, testing, and deployment activities for client projects.",
-    span : "March 2023 - June 2023",
+    title : 'Teaching Assistant',
+    company : "National Institute of Technology Durgapur",
+    description : "Teaching Assistant in the Algorithm BTech Laboratory with C++",
+    span : "Jan 2025 - Present",
     skills : [
-      "Software Engineering"
+      "Data Structure & Algorithms",
+      "C++"
     ]
   }
 ].reverse();
